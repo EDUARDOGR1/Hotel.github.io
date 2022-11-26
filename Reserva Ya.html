@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="Formulario.css">
+    <script defer src="Formulario.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">HOTEL MANAGEMENT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reservaciones
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="Reservaciones.html">Reservaciones</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Reserva Ya.html">Reserva Ya!</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Habitaciones.html">Habitaciones</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Piscina.html">Piscina</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Saladefiestas.html">Sala de fiestas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Salondebodas.html">Salón de bodas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Saladereuniones.html">Sala de reuniones</a></li>
+                        </ul>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Galeria.html">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Inicio de sesion.html">Iniciar sesión</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+</header>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Reservación</h1>
+            <div class="input-control">
+                <label for="username" >Nombre</label>
+                <input onfocus="abc(this)" ID="FN" onblur="fn()" id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="username" >Apellidos</label>
+                <input onfocus="abc(this)" ID="LN" onblur="fn2()" id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Correo</label>
+                <input onfocus="abc(this)" id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="celular">Telefono</label>
+                <input VALUE="+52" onfocus="abc(this)" id="celular" name="celular" type="text">
+                <div class="error"></div>
+                ---------------------------------------------
+            
+            <form action="" method="">
+                <BR>SELECCIONE EL TIPO DE CAMA:
+                <select>
+                <option value="SINGLE">INDIVIDUAL</OPTION>
+                <option value="DOUBLE">DOBLE</OPTION>
+                <br>
+                </SELECT>
+                <BR>SELECCIONAR ALOJAMIENTO:
+                <SELECT>
+                <option value="PREMIUM">PREMIUM</OPTION>
+                <option value="GENERAL">GENERAL</OPTION>
+                </SELECT>
+                <BR>ALOJAMIENTO ADICIONAL:
+                <SELECT>
+                <option value="POOL">PISCINA</OPTION>
+                <option value="GAME LOT">LOTE DE JUEGO</OPTION>
+                </SELECT>
+                </select>
+                <br>
+                ---------------------------------------------
+                FECHA DE RESERVA:<INPUT TYPE="TEXT" VALUE="    /     /2022" SIZE="35">
+                <BR>
+                FECHA DE SALIDA:<INPUT TYPE="TEXT" VALUE="    /     /2022" SIZE="35">
+                <BR>
+                    ---------------------------------------------
+                    SELECCIONE LA OPCIÓN DE PAGO: 
+                    <SELECT>
+                    <option value="POOL">TARJETA DE CRÉDITO</OPTION>
+                    <option value="GAME LOT">TARJETA DE DÉBITO </OPTION>
+                    <option value="POOL">EFECTIVO</OPTION>
+                    </SELECT>
+                    <BR>
+                    SELECCIONE PASARELA DE PAGO:
+                    <SELECT>
+                    <option value="POOL">PAYTM</OPTION>
+                    <option value="GAME LOT">PAY-PAL</OPTION>
+                    </SELECT>
+                    </b>
+                    </pre>
+                    </p> 
+            </div>
+            <button type="submit" onclick="proceed()">Procceder</button>
+            <script>
+                function abc(x) {
+                    x.style.background = "white";
+                }
+                 
+                function fn()
+                {
+                var x = document.getElementById("FN");
+                x.value=x.value.toUpperCase();
+                }
+                
+                function fn2()
+                {
+                var x = document.getElementById("LN");
+                x.value=x.value.toUpperCase();
+                }
+                
+                function sdf()
+                {
+                  x.style.background = "green";
+                }
+                
+                function proceed()
+                {
+                var x = document.getElementById("FN").value;
+                var y = document.getElementById("LN").value;
+                if(x==""||y=="")
+                {
+                alert("POR FAVOR, RELLENE TODOS LOS DETALLES");
+                }else
+                alert("Hola  "+x+" "+y+" tu reservación se ha subido correctamente. :)");
+                }
+                
+                </script> 
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+        </form>
+    </div>
+</body>
+</html>
