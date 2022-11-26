@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "https://www.hoteles.com/?locale=es_MX&siteid=300400003&gclid=5696cc5b836a1ebad86faf246f19aaee&gclsrc=3p.ds&&rffrid=sem.hcom.MX.BING.003.00.03.GT.s.kwrd=c.83563264750075.1337007351538950.422313879.0.kwd-83563755346112:loc-119.144400..hoteles.msclkid=5696cc5b836a1ebad86faf246f19aaee&semcid=HCOM-MX.UB.BING.GT-c-ES.HOTEL&semdtl=a1422313879.b11337007351538950.g1kwd-83563755346112:loc-119.l1.e1c.m15696cc5b836a1ebad86faf246f19aaee.r1226aedb2bd9ba5913ba2e3905b7feecb1521ea0d314e9cbce92d8f6db1f987f9.c1.j1144400.k1.d183563264750075.h1e.i1.n1.o1.p1.q1.s1.t1.x1.f1.u1.v1.w1&msclkid=5696cc5b836a1ebad86faf246f19aaee&utm_source=bing&utm_medium=cpc&utm_campaign=HWW%3AMEX%3ASPA%3A%24%3AGT%3AGLOB%3AX%3AX%3AX%3AX%3AX%3AX%3ACL%3A&utm_term=hoteles&utm_content=HWW%3AMEX%3ASPA%3A%24%3AGT%3AGLOB%3AX%3AX%3AX%3AX%3AX%3AX%3Ahotel%3A";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com:443/aclick?ld=e8oKmNPx0XqeXw01Z65DL9jTVUCUz_LNto_hxgb4Y40k7__hmlukTpnqTMg2E68Cwlc2uwBCfCE1dEZBiaS20uXqQGOXd3LkV5n0K5bXKrTwMFIUpc36Pcqoe-vSTWK5E1wMwnF2Lo9mXiXp670l-P-PsEbaCx_2x8LUoDOvel_QknHAaU6fZVmllVDtXyGnz4KEuOhg&amp;u=aHR0cHMlM2ElMmYlMmZ3d3cuaG90ZWxlcy5jb20lMmYlM2Zsb2NhbGUlM2Rlc19NWCUyNnNpdGVpZCUzZDMwMDQwMDAwMyUyNmdjbGlkJTNkNTY5NmNjNWI4MzZhMWViYWQ4NmZhZjI0NmYxOWFhZWUlMjZnY2xzcmMlM2QzcC5kcyUyNiUyNnJmZnJpZCUzZHNlbS5oY29tLk1YLkJJTkcuMDAzLjAwLjAzLkdULnMua3dyZCUzZGMuODM1NjMyNjQ3NTAwNzUuMTMzNzAwNzM1MTUzODk1MC40MjIzMTM4NzkuMC5rd2QtODM1NjM3NTUzNDYxMTIlM2Fsb2MtMTE5LjE0NDQwMC4uaG90ZWxlcy5tc2Nsa2lkJTNkNTY5NmNjNWI4MzZhMWViYWQ4NmZhZjI0NmYxOWFhZWUlMjZzZW1jaWQlM2RIQ09NLU1YLlVCLkJJTkcuR1QtYy1FUy5IT1RFTCUyNnNlbWR0bCUzZGExNDIyMzEzODc5LmIxMTMzNzAwNzM1MTUzODk1MC5nMWt3ZC04MzU2Mzc1NTM0NjExMiUzYWxvYy0xMTkubDEuZTFjLm0xNTY5NmNjNWI4MzZhMWViYWQ4NmZhZjI0NmYxOWFhZWUucjEyMjZhZWRiMmJkOWJhNTkxM2JhMmUzOTA1YjdmZWVjYjE1MjFlYTBkMzE0ZTljYmNlOTJkOGY2ZGIxZjk4N2Y5LmMxLmoxMTQ0NDAwLmsxLmQxODM1NjMyNjQ3NTAwNzUuaDFlLmkxLm4xLm8xLnAxLnExLnMxLnQxLngxLmYxLnUxLnYxLncxJTI2bXNjbGtpZCUzZDU2OTZjYzViODM2YTFlYmFkODZmYWYyNDZmMTlhYWVlJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkSFdXJTI1M0FNRVglMjUzQVNQQSUyNTNBJTI1MjQlMjUzQUdUJTI1M0FHTE9CJTI1M0FYJTI1M0FYJTI1M0FYJTI1M0FYJTI1M0FYJTI1M0FYJTI1M0FDTCUyNTNBJTI2dXRtX3Rlcm0lM2Rob3RlbGVzJTI2dXRtX2NvbnRlbnQlM2RIV1clMjUzQU1FWCUyNTNBU1BBJTI1M0ElMjUyNCUyNTNBR1QlMjUzQUdMT0IlMjUzQVglMjUzQVglMjUzQVglMjUzQVglMjUzQVglMjUzQVglMjUzQWhvdGVsJTI1M0E&amp;rlid=5696cc5b836a1ebad86faf246f19aaee&amp;ntb=1&amp;ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
