@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    background: rgb(238, 243, 245);
+    padding: 20px;
+}
+
+#boton{
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+    .lista{
+        flex-direction: column;
+    }
+    .slide{
+        position: relative;
+        top: 0;
+        display: none;
+        width: 100%;
+    }
+    .slide ul{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    a{
+        display: block!important;
+        padding: 20px 35px!important;
+    }
+
+    .listItem > .slide li a{
+        margin-left: 20px;
+    }
+    .listItem .slide li > ul li a{
+        margin-left: 40px;
+    }
+    .listItem:hover > .slide{
+        display: none;
+    }
+    .listItem .slide li:hover > ul{
+        display: none;
+}
+
+@media screen and (max-width:380px) {
+    .menu{
+        width: 100%;
+    }
+}
